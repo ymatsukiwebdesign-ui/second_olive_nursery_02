@@ -55,3 +55,55 @@ if (pageTop) {
     }
   });
 }
+
+// ===== fade-up =====
+const fadeItems = document.querySelectorAll(
+  ".intro .container, .page-links-head, .page-card, .gallery-head, .gallery-single, .news-head, .news-list, .recruit-head, .recruit-text, .recruit-images, .recruit-btn"
+);
+
+fadeItems.forEach((item) => {
+  item.classList.add("fade-up");
+});
+
+const fadeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold: 0.18,
+  }
+);
+
+fadeItems.forEach((item) => {
+  fadeObserver.observe(item);
+});
+
+// ===== オープニング =====
+/*
+const pigeon = document.getElementById("pigeon");
+
+const pigeonImages = [
+  "images/pigeon_up01.png",
+  "images/pigeon_down01.png"
+];
+
+let index = 0;
+
+// 羽ばたき（2枚切り替え）
+setInterval(() => {
+  index = (index + 1) % 2;
+  pigeon.src = pigeonImages[index];
+}, 400); // ←ここが速さ（300〜600で調整OK）
+
+// 3秒後にフェードアウト
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("opening").classList.add("fade-out");
+  }, 3000);
+});
+
+*/
