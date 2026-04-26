@@ -1,0 +1,37 @@
+/* スマホ */
+@media screen and (max-width: 768px) {
+  .corporate-hero {
+    padding: 90px 0 50px;
+  }
+
+  .corporate-title {
+    font-size: 30px;
+    letter-spacing: 0.2em;
+  }
+
+  .corporate-message {
+    padding: 30px 0 70px;
+  }
+
+  .corporate-image {
+    margin-bottom: 55px;
+    border-radius: 18px;
+  }
+
+  .corporate-lead h2 {
+    font-size: 23px;
+    line-height: 1.9;
+  }
+
+  .corporate-profile,
+  .corporate-history {
+    padding: 75px 0;
+  }
+
+  .profile-list div,
+  .history-list div {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 24px 0;
+  }
+}
